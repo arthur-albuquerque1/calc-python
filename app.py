@@ -36,14 +36,8 @@ def calculator():
         
         ##### Mensagem de erro e sua interação, caso o usuário digite um número diferente das opções disponiveís 
         else:           
-             erro_escolha = int(input('Opção inválida, pressione "1" caso queira tentar novamente, pressione "2" caso queira fechar o programa: '))             
-             if erro_escolha == 1:
-                  calculator()
-             elif erro_escolha == 2:
-                  print("Adeus!")
-                  break
-             else: 
-                  break
+             print('Opção inválida, tente novamente')
+             break
                   
 
              
