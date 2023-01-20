@@ -1,13 +1,16 @@
 def calculator():
     while True:    
+        ##### Define as opções de operações
         print("1. Adição")
         print("2. Subtração")
         print("3. Multiplicação")
         print("4. Divisão")
         print("5. Sair")
 
+        ##### Insere o input para que o usuário escolha qual das operações quer fazer
         escolha = int(input(("Escolha a função: ")))
 
+        ##### Função para realização das 4 operações, juntamente com os comandos de input dos dois números
         def numeros():
             num1 = float(input("Digite o primeiro número: "))
             num2 = float(input("Digite o segundo número: "))
@@ -19,19 +22,29 @@ def calculator():
                 print(num1 * num2)
             elif escolha == 4:
                 print(num1 / num2)
-
+        
+        #####
         if escolha == 5:
                 print("Adeus!")
                 break
         elif 0 > escolha < 5:
              numeros()
-        else:
-             erro_escolha = int(input(("Esta opção é inválida, escolha novamente digitando 1, ou feche o programa digitando 2: ")))
+        
+        elif escolha == 666:
+             print("Não olhe para trás, ele está com você...")
+             break
+        
+        ##### Mensagem de erro e sua interação, caso o usuário digite um número diferente das opções disponiveís 
+        else:           
+             erro_escolha = int(input('Opção inválida, pressione "1" caso queira tentar novamente, pressione "2" caso queira fechar o programa: '))             
              if erro_escolha == 1:
                   calculator()
              elif erro_escolha == 2:
                   print("Adeus!")
                   break
+             else: 
+                  break
+                  
 
              
 
